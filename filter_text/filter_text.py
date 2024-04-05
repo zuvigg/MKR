@@ -1,10 +1,13 @@
 def filter_text(input_file, output_file, keyword):
-    with open(input_file, 'r') as f:
+    input_path = "filter_text/" + input_file
+    with open(input_path, 'r') as f:
         lines = f.readlines()
 
     filtered_lines = [line for line in lines if keyword in line]
 
-    with open(output_file, 'w') as f:
+    output_path = "filter_text/" + output_file
+
+    with open(output_path, 'w') as f:
         f.writelines(filtered_lines)
 
 if __name__ == "__main__":
